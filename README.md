@@ -1,14 +1,14 @@
-# Historiques des requêtes dans une BDD Postres
+# Historiques des requêtes dans une BDD Postgres
 
 Création d'un schéma audits contenant 2 tables :
-- 'tables_monitorees' : Liste des tables dont on veut sauvegarder l'historique des requêtes effectuées (insert update et/ou delete)
-- 'historiques' : Détails des opérations effectuées sur les tables monitorées  
+- __tables_monitorees__ : Liste des tables dont on veut sauvegarder l'historique des requêtes effectuées (insert update et/ou delete)
+- __historiques__ : Détails des opérations effectuées sur les tables monitorées  
 
 ## Gestion du champ 'user_operation'
-La table 'historiques' contient un champ 'user_operation' qui contient la valeur de current_user dans Postgres.
+La table __historiques__ contient un champ __user_operation__ qui contient la valeur de current_user dans Postgres.
 Pour pouvoir surcharger l'utilisateur Postgres, il est possible :
 
-1/ De définir une variable 'myapp.username' en recompilant une image Postgres :
+1/ De définir une variable __myapp.username__ en recompilant une image Postgres :
 ```
 FROM postgres:16.2
 RUN echo "myapp.username = 'null'" >> /usr/share/postgresql/postgresql.conf.sample
