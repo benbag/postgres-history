@@ -4,7 +4,6 @@
 DROP TRIGGER IF EXISTS tr_gestion_tables_monitorees ON audits.tables_monitorees;
 DROP FUNCTION IF EXISTS audits.ps_make_historique() CASCADE;
 DROP FUNCTION IF EXISTS audits.ps_gestion_tables_monitorees() CASCADE;
-DROP FUNCTION IF EXISTS audits.ps_query_username(text) CASCADE;
 DROP TABLE IF EXISTS audits.historiques;
 DROP TABLE IF EXISTS audits.tables_monitorees;
 
